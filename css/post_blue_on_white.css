@@ -64,6 +64,11 @@ a.link:hover{
 	font-size:40px;
 	font-family: 'Oxygen';
 }
+.post_timeline{
+	color:#AAA;
+	font-size:20px;
+	font-family: 'Oxygen';
+}
 .footer{
 	min-height: 200px;
 	background-color: #378EFF;

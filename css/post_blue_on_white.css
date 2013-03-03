@@ -1,0 +1,134 @@
+@import url(https://fonts.googleapis.com/css?family=Oxygen|Open+Sans|Varela+Round|Crete+Round);
+body{
+	background-color: #FFF;
+	margin: 0 0;
+	padding:0;
+	text-align: center;
+}
+.title_container{
+	padding-top:3%;
+	min-height: 150px;
+	width:60%;
+	background-color: #FFF;
+	margin:auto;
+	text-align: left;
+}
+.post_container{
+	min-height: 600px;
+	width:60%;
+	min-width: 200px;
+	vertical-align: middle;
+	text-align: left;
+	margin:auto;
+	color:#666666;
+	font-size: 17px;
+	font-family: 'Open Sans'
+}
+
+.post_body{
+	min-height: 500px;
+	width:60%;
+	min-width: 200px;
+	vertical-align: middle;
+	text-align: left;
+	margin:auto;
+}
+.post{
+	color:#888888;
+	font-size: 25px;
+	font-family: 'Oxygen';
+	text-decoration: none;
+	transition:color 1s;
+	-moz-transition:color 1s; /* Firefox */
+	-webkit-transition:color 1s; /* Safari and Chrome */
+	-o-transition:color 1s; /* Opera */
+}
+.post:hover{
+	color:#378EFF;	
+}
+a.link{
+	color:#888888;
+	text-decoration: none;
+	border-bottom: 1px solid #888888;
+	transition:color 1s;
+	-moz-transition:color 1s; /* Firefox */
+	-webkit-transition:color 1s; /* Safari and Chrome */
+	-o-transition:color 1s; /* Opera */
+}
+a.link:hover{
+	color:#378EFF;
+	border-bottom: 1px solid #378EFF;
+}
+.post_title{
+	color: #378EFF;
+	font-size:40px;
+	font-family: 'Oxygen';
+}
+.footer{
+	min-height: 200px;
+	background-color: #378EFF;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-top: 2%;
+	text-align: center;
+	margin 0 0;
+	overflow: hidden;
+}
+.footer_text{
+	color: #FFF;
+	font-family: 'Open Sans';
+}
+p.quote{
+	border-left: 3px solid #378EFF;
+	padding-left: 10px;
+}
+hr{
+	background-color: #999;
+	height: 2px;
+	border: none;
+	align:center bottom;
+}
+hr.seperator{
+	background: #378EFF;
+	height:1px;
+	border: none;
+	width:50%;
+	margin-left: 25%;
+}
+hr.seperator_white{
+	background: #FFF;
+	height:1px;
+	border: none;
+	width:60%;
+	margin-left: 20%;
+}
+.small{
+	font-size: 14px;
+}
+.medium{
+	font-size:18px;
+}
+.big{
+	font-size:35px;
+}
+a.link_white{
+	z-index: 10;
+	margin: auto;
+	color: #FFF;
+	text-decoration: none;
+	opacity:0.65;
+
+	transition:opacity 1s;
+	-moz-transition:opacity 1s; /* Firefox */
+	-webkit-transition:opacity 1s; /* Safari and Chrome */
+	-o-transition:opacity 1s; /* Opera */
+}
+a.link_white:hover{
+	opacity: 1;
+}
+.footer-table{
+	border: none;
+	margin: auto;
+	width: 50%;
+	min-width: 80px;
+}

@@ -1,0 +1,131 @@
+@import url(https://fonts.googleapis.com/css?family=Oxygen|Varela+Round);
+body{
+	background-color: #FFF;
+	color: #888;
+	margin: 0 0;
+	padding:0;
+	vertical-align: middle;
+	text-align: center;
+}
+.home_container{
+	width:80%;
+	margin: auto;
+	margin-top: 8%;
+	min-width: 500px;
+	min-height: 650px;
+	text-align: center;
+}
+.title{
+	width:80%;
+	min-width: 900px;
+	text-align: center;
+	margin:auto;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+.title_text{
+	font-family: "Varela Round";
+	font-size: 65px;
+	margin: auto;
+}
+.table{
+	border: none;
+	margin: auto;
+	width: 100%;
+	min-width: 300px;
+}
+.table_blocks{
+	background-color: #FFF;
+	text-align: center;
+	margin:auto;
+	height:300px;
+	width: 33%;
+	min-width: 300px;
+	font-size: 30px;
+	font-family: "Varela Round";
+}
+a.block{
+	z-index: 10;
+	display: block;
+	margin: auto;
+	width:200px;
+	height:200px;
+	line-height: 200px;
+	background-color: #FFF;
+	color: #888;
+	text-decoration: none;
+
+	-moz-border-radius-bottomright: 15px;
+	border-bottom-right-radius: 15px;
+	-moz-border-radius-bottomleft: 15px;
+	border-bottom-left-radius: 15px;
+	-moz-border-radius-topright: 15px;
+	border-top-right-radius: 15px;
+	-moz-border-radius-topleft: 15px;
+	border-top-left-radius: 15px;
+
+	transition:color 1s;
+	-moz-transition:color 1s; /* Firefox */
+	-webkit-transition:color 1s; /* Safari and Chrome */
+	-o-transition:color 1s; /* Opera */
+	transition:background-color 1s;
+	-moz-transition:background-color 1s; /* Firefox */
+	-webkit-transition:background-color 1s; /* Safari and Chrome */
+	-o-transition:background-color 1s; /* Opera */
+}
+a.block:hover{
+	color: #FFF;
+	background-color: #378EFF;
+}
+a.link_icon{
+	z-index: 10;
+	display: block;
+	margin: auto;
+	width:60px;
+	height:60px;
+	line-height: 60px;
+	background-color: #378EFF;
+	color: #FFF;
+	text-decoration: none;
+
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+
+	transition:color 1s;
+	-moz-transition:color 1s; /* Firefox */
+	-webkit-transition:color 1s; /* Safari and Chrome */
+	-o-transition:color 1s; /* Opera */
+	transition:background-color 1s;
+	-moz-transition:background-color 1s; /* Firefox */
+	-webkit-transition:background-color 1s; /* Safari and Chrome */
+	-o-transition:background-color 1s; /* Opera */
+}
+a.link_icon:hover{
+	color: #378EFF;
+	background-color: #FFF;
+	opacity: 0.75;
+}
+.footer{
+	min-height: 150px;
+	background-color: #378EFF;
+	overflow: hidden;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-top: 2%;
+	text-align: center;
+	margin:0 0;
+	margin-bottom: 0;
+	
+}
+.footer-text{
+	color: #FFF;
+	font-family: 'Open Sans';
+	font-size: 15px;
+	vertical-align: bottom;
+}
+.footer-table{
+	border: none;
+	margin: auto;
+	width: 80%;
+	min-width: 250px;
+}

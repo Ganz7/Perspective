@@ -14,7 +14,7 @@ body{
 	text-align: left;
 }
 .post_container{
-	min-height: 600px;
+	min-height: 500px;
 	width:60%;
 	min-width: 200px;
 	vertical-align: middle;
@@ -24,7 +24,14 @@ body{
 	font-size: 17px;
 	font-family: 'Open Sans'
 }
-
+.nav_container{
+	min-height: 50px;
+	width:60%;
+	min-width: 200px;
+	vertical-align: middle;
+	text-align: left;
+	margin:auto;
+}
 .post_body{
 	min-height: 500px;
 	width:60%;
@@ -50,10 +57,10 @@ a.link{
 	color:#888888;
 	text-decoration: none;
 	border-bottom: 1px solid #888888;
-	transition:color 1s;
-	-moz-transition:color 1s; /* Firefox */
-	-webkit-transition:color 1s; /* Safari and Chrome */
-	-o-transition:color 1s; /* Opera */
+	transition:color 0.6s;
+	-moz-transition:color 0.6s; /* Firefox */
+	-webkit-transition:color 0.6s; /* Safari and Chrome */
+	-o-transition:color 0.6s; /* Opera */
 }
 a.link:hover{
 	color:#378EFF;
@@ -136,4 +143,7 @@ a.link_white:hover{
 	margin: auto;
 	width: 50%;
 	min-width: 80px;
+}
+.navigation-link{
+	font-size: 18px;
 }

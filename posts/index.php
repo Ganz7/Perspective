@@ -41,10 +41,26 @@
 		</div>
 
 		<div id="posts" class="post_container">
-				<?php
+			<?php
 			      require('connect.php');	
+				$pageNumber = $_GET['page'] + 0;  
 			
-  				$query = mysql_query("SELECT * FROM post_table ORDER BY pid DESC LIMIT 0,10");
+				$postCountQuery = mysql_query("SELECT COUNT(*) FROM post_table");
+				$postCount = mysql_result($postCountQuery, 0);
+
+				if($pageNumber !=0)
+				{
+					$end = $postCount - (($pageNumber-1) * 7);
+				}
+				else                       			#when page = 0; Default
+				{
+					$end = $postCount;
+					$pageNumber = 1;
+				}
+				$start = $end - 7;
+
+				$queryString = "SELECT * FROM post_table WHERE pid > " . strval($start) . " AND pid <= " . strval($end) . " ORDER BY pid DESC";
+  				$query = mysql_query($queryString);
   				
   				while($post_rec=mysql_fetch_array($query))
   				{
@@ -53,8 +69,28 @@
   						
   						echo "<p class=\"post\"><a class=\"post\" href=\"view.php?id=$blogid\">$blogtitle</a></p>";
   						
-			     }
-		       ?>	
+			     	}
+
+		 	?>	
+		</div>
+		<div class = "nav_container">
+			<?php
+				echo "<p class=\"post navigation-link\" style =\"text-align: center;\" >";
+			     	if( ($postCount / 7 > $pageNumber) || ($postCount / 7 == $pageNumber && $postCount % 7 != 0 ) )
+			     	{
+			     		$targetPage = $pageNumber + 1;
+			     		echo "<a class=\"post navigation-link\" href=\"index.php?page=$targetPage\">previous</a>";
+			     	}
+			     	echo " | ";
+			     	//echo "</td><td class=\" navigation-link\" style = \"text-align:right; background:#333;\">";
+			     	if($pageNumber > 1)
+			     	{
+			     		$targetPage = $pageNumber - 1;
+			     		echo "<a class=\"post navigation-link\" href=\"index.php?page=$targetPage\">next</a>";
+			     	}
+			     	//echo "</td></tr></table>";
+			     	echo "</p>";
+			 ?>
 		</div>
 	</div>
 
@@ -62,11 +98,11 @@
 		<p class="footer_text big"><img src="/img/fracture_white.png" height="100px" width="80px"/><br/>Ganz7
 		<table class="footer-table">
 			<tr>
-					<td><a href="/about.html"  class="link_white medium">About</a></td>
+					<td><a href="/about.html"  class="link_white footer_text medium">About</a></td>
 					<td class="footer_text medium">|</td>
-					<td><a href="/" class="link_white medium">Home</a></td>
+					<td><a href="/" class="link_white footer_text medium">Home</a></td>
 					<td class="footer_text medium">|</td>
-					<td><a href="" target="_blank" class="link_white medium">Code</a></td>
+					<td><a href="" target="_blank" class="link_white footer_text medium">Code</a></td>
 			</tr>
 		</table>
 		<br/>

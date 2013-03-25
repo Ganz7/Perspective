@@ -69,8 +69,9 @@
 				require('connect.php');	
 				
 				$id = $_GET['id'];
-				
-				$query = mysql_query("SELECT * FROM post_table WHERE pid=$id");
+				$queryStatement = "SELECT * FROM post_table WHERE pid='$id'";
+				$queryStatement = mysql_real_escape_string($queryStatement);
+				$query = mysql_query($queryStatement);
 				$post_rec=mysql_fetch_array($query);
 				$blogtitle = $post_rec['title'];
 				$blogtitle = strip_tags($blogtitle);
@@ -87,8 +88,9 @@
 				require('connect.php');	
 				
 				$id = $_GET['id'];
-				
-				$query = mysql_query("SELECT * FROM post_table WHERE pid=$id");
+				$queryStatement = "SELECT * FROM post_table WHERE pid='$id'";
+				$queryStatement = mysql_real_escape_string($queryStatement);
+				$query = mysql_query($queryStatement);
 				$post_rec=mysql_fetch_array($query);
 				$blogpost = $post_rec['post'];
 				$blogtitle = $post_rec['title'];

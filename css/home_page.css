@@ -64,14 +64,14 @@ a.block{
 	-moz-border-radius-topleft: 15px;
 	border-top-left-radius: 15px;
 
-	transition:color 1s;
-	-moz-transition:color 1s; /* Firefox */
-	-webkit-transition:color 1s; /* Safari and Chrome */
-	-o-transition:color 1s; /* Opera */
-	transition:background-color 1s;
-	-moz-transition:background-color 1s; /* Firefox */
-	-webkit-transition:background-color 1s; /* Safari and Chrome */
-	-o-transition:background-color 1s; /* Opera */
+	transition:color 0.7s;
+	-moz-transition:color 0.7s; /* Firefox */
+	-webkit-transition:color 0.7s; /* Safari and Chrome */
+	-o-transition:color 0.7s; /* Opera */
+	transition:background-color 0.7s;
+	-moz-transition:background-color 0.7s; /* Firefox */
+	-webkit-transition:background-color 0.7s; /* Safari and Chrome */
+	-o-transition:background-color 0.7s; /* Opera */
 }
 a.block:hover{
 	color: #FFF;
@@ -91,14 +91,14 @@ a.link_icon{
 	-moz-border-radius: 30px;
 	border-radius: 30px;
 
-	transition:color 1s;
-	-moz-transition:color 1s; /* Firefox */
-	-webkit-transition:color 1s; /* Safari and Chrome */
-	-o-transition:color 1s; /* Opera */
-	transition:background-color 1s;
-	-moz-transition:background-color 1s; /* Firefox */
-	-webkit-transition:background-color 1s; /* Safari and Chrome */
-	-o-transition:background-color 1s; /* Opera */
+	transition:color 0.7s;
+	-moz-transition:color 0.7s; /* Firefox */
+	-webkit-transition:color 0.7s; /* Safari and Chrome */
+	-o-transition:color 0.7s; /* Opera */
+	transition:background-color 0.7s;
+	-moz-transition:background-color 0.7s; /* Firefox */
+	-webkit-transition:background-color 0.7s; /* Safari and Chrome */
+	-o-transition:background-color 0.7s; /* Opera */
 }
 a.link_icon:hover{
 	color: #378EFF;

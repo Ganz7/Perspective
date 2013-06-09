@@ -2,76 +2,26 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="/css/post_blue_on_white.css"/>
-	<link href="/css/kudos.css" media="screen" rel="stylesheet" type="text/css" />
 
 	<link rel="icon" href="/img/fracture_bluee.ico"/>
 	<link rel="shortcut icon" href="/img/fracture_bluee.ico"/>
 
-	<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
-	<script type="text/javascript" src="/js/jquery.cookie.js"></script>
-	<script type="text/javascript" src="/js/kudos.js"></script>
-
-	    <script type="text/javascript"> 
+	<script type="text/javascript">
 	      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 	      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-	    </script> 
-	    <script type="text/javascript"> 
+	    </script>
+	    <script type="text/javascript">
 	      try {
 	      var pageTracker = _gat._getTracker("UA-29903327-1");
 	      pageTracker._trackPageview();
-	      } catch(err) {}
-	     </script>
-
-	     <script type="text/javascript">
-			// needs to be a string for jquery.cookie
-			var postId = '1'; 
-			$(function()
-			{
-				$("figure.kudoable").kudoable();
-				// check to see if user has already kudod
-				// fyi cookies do not work when you are viewing this as a file
-				if($.cookie(postId) == 'true') {
-					// make kudo already kudod
-					$("figure.kudoable").removeClass("animate").addClass("complete");
-
-					// your server would take care of the proper kudos count, but because this is a
-					// static page, we need to set it here so it doesn't become -1 when you remove
-					// the kudos after a reload
-					//$(".num").html(1);
-				}	
-
-				// when kudoing
-				$("figure.kudo").bind("kudo:active", function(e)
-				{});
-
-				// when not kudoing
-				$("figure.kudo").bind("kudo:inactive", function(e)
-				{});
-
-				// after kudo'd
-				$("figure.kudo").bind("kudo:added", function(e)
-				{
-					var element = $(this);
-					// set cookie so user cannot kudo again for 7 days
-					$.cookie(postId, 'true', { expires: 7 });
-				});
-				// after removing a kudo
-				$("figure.kudo").bind("kudo:removed", function(e)
-				{
-					var element = $(this);
-					// remove cookie
-					$.removeCookie(postId);
-				});
-			});
-		</script>
+	      } catch(err) {}</script>
 
 	<?php
-				require('connect.php');	
-				
+				require('connect.php');
+
 				$id = $_GET['id'];
-				$queryStatement = "SELECT * FROM post_table WHERE pid='$id'";
-				$queryStatement = mysql_real_escape_string($queryStatement);
-				$query = mysql_query($queryStatement);
+
+				$query = mysql_query("SELECT * FROM post_table WHERE pid=$id");
 				$post_rec=mysql_fetch_array($query);
 				$blogtitle = $post_rec['title'];
 				$blogtitle = strip_tags($blogtitle);
@@ -80,35 +30,42 @@
 </head>
 
 <body>
+
+	<!--Banner Start-->
+		<div>
+			<table style="height:10px; width:100%;">
+				<tr>
+					<td class="header-block" style="background-color:#82B9FF;"></td>
+					<td class="header-block" style="background-color:#69AAFF;"></td>
+					<td class="header-block" style="background-color:#529DFF;"></td>
+					<td class="header-block" style="background-color:#378EFF;"></td>
+					<td class="header-block" style="background-color:#0F78FF;"></td>
+					<td class="header-block" style="background-color:#0068ED;"></td>
+					<td class="header-block" style="background-color:#0060DB;"></td>
+				</tr>
+			</table>
+		</div>
+	<!--Banner End-->
+
 	<div id="main">
 		<div id="title" class="title_container">
-			
+
 
 			<?php
-				require('connect.php');	
-				
+				require('connect.php');
+
 				$id = $_GET['id'];
-				$queryStatement = "SELECT * FROM post_table WHERE pid='$id'";
-				$queryStatement = mysql_real_escape_string($queryStatement);
-				$query = mysql_query($queryStatement);
+
+				$query = mysql_query("SELECT * FROM post_table WHERE pid=$id");
 				$post_rec=mysql_fetch_array($query);
 				$blogpost = $post_rec['post'];
 				$blogtitle = $post_rec['title'];
 				$timeline = $post_rec['timeline'];
-				
+
 				echo "<p class=\"post_title\">$blogtitle</p>";
-				echo "<p class=\"post_timeline\">$timeline</p>";		
+				echo "<p class=\"post_timeline\">$timeline</p>";
 			?>
-			<figure class="kudo kudoable" data-id="1">
-				<a class="kudobject">
-					<div class="opening"><div class="circle">&nbsp;</div></div>
-				</a>
-				<a href="#kudo" class="count">
-					<span class="num">0</span>
-					<span class="txt">Kudos</span>
-				</a>
-			</figure>
-		<hr/>	
+		<hr/>
 		</div>
 
 		<div id="posts" class="post_container">
@@ -123,11 +80,11 @@
 		<p class="footer_text big"><img src="/img/fracture_white.png" height="100px" width="80px"/><br/>Ganz7
 		<table class="footer-table">
 			<tr>
-					<td><a href="/about.html" class="link_white footer_text medium">About</a></td>
+					<td><a href="/about.html" class="link_white medium">About</a></td>
 					<td class="footer_text medium">|</td>
-					<td><a href="/"  class="link_white footer_text medium">Home</a></td>
+					<td><a href="/"  class="link_white medium">Home</a></td>
 					<td class="footer_text medium">|</td>
-					<td><a href="" target="_blank" class="link_white footer_text medium">Code</a></td>
+					<td><a href="" target="_blank" class="link_white medium">Code</a></td>
 			</tr>
 		</table>
 		<br/>

@@ -21,30 +21,46 @@
 		<link rel="icon" href="/img/fracture_bluee.ico"/>
 		<link rel="shortcut icon" href="/img/fracture_bluee.ico"/>
 
-		<script type="text/javascript"> 
+		<script type="text/javascript">
 		      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 		      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-		    </script> 
-		    <script type="text/javascript"> 
+		    </script>
+		    <script type="text/javascript">
 		      try {
 		      var pageTracker = _gat._getTracker("UA-29903327-1");
 		      pageTracker._trackPageview();
 		      } catch(err) {}</script>
 
-		
-</head>	
+
+</head>
 <body>
+	<!--Banner Start-->
+		<div>
+			<table style="height:10px; width:100%;">
+				<tr>
+					<td class="header-block" style="background-color:#82B9FF;"></td>
+					<td class="header-block" style="background-color:#69AAFF;"></td>
+					<td class="header-block" style="background-color:#529DFF;"></td>
+					<td class="header-block" style="background-color:#378EFF;"></td>
+					<td class="header-block" style="background-color:#0F78FF;"></td>
+					<td class="header-block" style="background-color:#0068ED;"></td>
+					<td class="header-block" style="background-color:#0060DB;"></td>
+				</tr>
+			</table>
+		</div>
+	<!--Banner End-->
+
 	<div id="main">
 		<div id="title" class="title_container">
 			<p class="post_title">Posts</p>
-		<hr/>	
+		<hr/>
 		</div>
 
 		<div id="posts" class="post_container">
 			<?php
-			      require('connect.php');	
-				$pageNumber = $_GET['page'] + 0;  
-			
+			      require('connect.php');
+				$pageNumber = $_GET['page'] + 0;
+
 				$postCountQuery = mysql_query("SELECT COUNT(*) FROM post_table");
 				$postCount = mysql_result($postCountQuery, 0);
 
@@ -61,17 +77,17 @@
 
 				$queryString = "SELECT * FROM post_table WHERE pid > " . strval($start) . " AND pid <= " . strval($end) . " ORDER BY pid DESC";
   				$query = mysql_query($queryString);
-  				
+
   				while($post_rec=mysql_fetch_array($query))
   				{
   						$blogid = $post_rec['pid'];
   						$blogtitle = $post_rec['title'];
-  						
+
   						echo "<p class=\"post\"><a class=\"post\" href=\"view.php?id=$blogid\">$blogtitle</a></p>";
-  						
+
 			     	}
 
-		 	?>	
+		 	?>
 		</div>
 		<div class = "nav_container">
 			<?php
@@ -112,7 +128,7 @@
 		<hr class="seperator_white">
 		<p class="footer_text small">Form.Follows.Function</p>
 	</div>
-	
+
 </body>
 </html>
 <? ob_flush(); ?>

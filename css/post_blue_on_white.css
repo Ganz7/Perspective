@@ -51,7 +51,7 @@ body{
 	-o-transition:color 1s; /* Opera */
 }
 .post:hover{
-	color:#378EFF;	
+	color:#378EFF;
 }
 a.link{
 	color:#888888;
@@ -130,10 +130,10 @@ a.link_white{
 	text-decoration: none;
 	opacity:0.65;
 
-	transition:opacity 1s;
-	-moz-transition:opacity 1s; /* Firefox */
-	-webkit-transition:opacity 1s; /* Safari and Chrome */
-	-o-transition:opacity 1s; /* Opera */
+	transition:opacity 0.6s;
+	-moz-transition:opacity 0.6s; /* Firefox */
+	-webkit-transition:opacity 0.6s; /* Safari and Chrome */
+	-o-transition:opacity 0.6s; /* Opera */
 }
 a.link_white:hover{
 	opacity: 1;
@@ -146,4 +146,7 @@ a.link_white:hover{
 }
 .navigation-link{
 	font-size: 18px;
+}
+.header-block{
+      min-width: 14.28%;
 }

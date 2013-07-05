@@ -33,7 +33,7 @@
 
 	<!--Banner Start-->
 		<div>
-			<table style="height:10px; width:100%;">
+			<table cellspacing="0" style="height:10px; width:100%; border:none;">
 				<tr>
 					<td class="header-block" style="background-color:#82B9FF;"></td>
 					<td class="header-block" style="background-color:#69AAFF;"></td>

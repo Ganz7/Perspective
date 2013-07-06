@@ -118,10 +118,10 @@ hr.seperator_white{
 	font-size: 14px;
 }
 .medium{
-	font-size:18px;
+	font-size: 18px;
 }
 .big{
-	font-size:35px;
+	font-size: 35px;
 }
 a.link_white{
 	z-index: 10;
@@ -139,6 +139,7 @@ a.link_white:hover{
 	opacity: 1;
 }
 .footer-table{
+	font-family: 'Oxygen';
 	border: none;
 	margin: auto;
 	width: 50%;

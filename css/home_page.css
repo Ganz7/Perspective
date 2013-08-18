@@ -1,4 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Oxygen|Varela+Round);
+html{
+	 -webkit-text-stroke: 0.25px;
+}
 body{
 	background-color: #FFF;
 	color: #666;

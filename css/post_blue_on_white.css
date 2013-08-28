@@ -1,9 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Oxygen|Open+Sans|Varela+Round|Crete+Round);
+html{
+	 -webkit-text-stroke: 0.25px;
+}
 body{
 	background-color: #FFF;
 	margin: 0 0;
 	padding:0;
 	text-align: center;
+	line-height: 1.5;
 }
 .title_container{
 	padding-top:3%;

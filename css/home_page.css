@@ -1,7 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Oxygen|Varela+Round);
+html{
+	 -webkit-text-stroke: 0.25px;
+}
 body{
 	background-color: #FFF;
-	color: #888;
+	color: #666;
 	margin: 0 0;
 	padding:0;
 	vertical-align: middle;
@@ -52,7 +55,7 @@ a.block{
 	height:200px;
 	line-height: 200px;
 	background-color: #FFF;
-	color: #888;
+	color: #666;
 	text-decoration: none;
 
 	-moz-border-radius-bottomright: 15px;

@@ -8,7 +8,7 @@
 		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 
 		<meta name="description" content="Ganesh's home on the web"/>
-        		<meta name="keywords" content="ganz7, ganz7.in, ganesh, kumar, Ganesh kumar, vr, Ganesh Kumar vr, Ganesh V R Kumar, perspective, india, blog, code, about, anime, fracture, naruto, me, coder, hacker, hack, grey,india, chennai, ceg, anna, university" />
+        <meta name="keywords" content="ganz7, ganz7.in, ganesh, kumar, Ganesh kumar, vr, Ganesh Kumar vr, Ganesh V R Kumar, perspective, india, blog, code, about, anime, fracture, naruto, me, coder, hacker, hack, grey,india, chennai, ceg, anna, university" />
 		<!--<script type="text/javascript">
 			$(document).ready(function(){
 				$("#main").scroll(function(){
